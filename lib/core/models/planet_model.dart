@@ -9,7 +9,9 @@ class PlanetModel {
   String mass;
   double gravity;
   String surfaceArea;
+  String imageName;
   PlanetModel({
+    required this.imageName,
     required this.planetName,
     required this.title,
     required this.about,

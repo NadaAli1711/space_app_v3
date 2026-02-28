@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import '../color_and_styles/space_colors.dart';
+import 'package:space_app/core/utils/app_styles.dart';
+import '../../core/utils/space_colors.dart';
 
 typedef OnButtonClick = void Function(BuildContext, String);
 
 class SpaceElevatedButton extends StatelessWidget {
-  String text;
-  String routeName;
+  final String text;
+ final String routeName;
 
-  BuildContext context;
-  OnButtonClick onButtonClick;
+  final BuildContext context;
+ final OnButtonClick onButtonClick;
 
-  SpaceElevatedButton({
+ const SpaceElevatedButton({super.key,
     required this.text,
     required this.onButtonClick,
     required this.routeName,
@@ -18,14 +19,18 @@ class SpaceElevatedButton extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
+    double designWidth = 375;
+    var height = MediaQuery.of(context).size.height;
+    double designHeight = 812;
 
     return ElevatedButton(
 
       style: ElevatedButton.styleFrom(
-        padding: EdgeInsets.symmetric(vertical: 18, horizontal: 26),
+        padding: EdgeInsets.symmetric(vertical: (18/designHeight)*height, horizontal: (26/designWidth)*width),
         backgroundColor: SpaceColors.red,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadiusGeometry.circular(29),
+          borderRadius: BorderRadiusGeometry.circular((29/designWidth)*width),
         ),
       ),
       onPressed: () {
@@ -36,13 +41,9 @@ class SpaceElevatedButton extends StatelessWidget {
         children: [
           Text(
             text,
-            style: TextStyle(
-              color: SpaceColors.white,
-              fontWeight: FontWeight.w600,
-              fontSize: 20,
-            ),
+            style:AppStyles.white20SemiBold
           ),
-          Icon(Icons.arrow_forward, color: SpaceColors.white, size: 25),
+          Icon(Icons.arrow_forward, color: SpaceColors.white, size: (25/designWidth)*width),
         ],
       ),
     );

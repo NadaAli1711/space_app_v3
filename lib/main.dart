@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:space_app/Screens/login_screen.dart';
-import 'package:space_app/Screens/planet_details_screen.dart';
-import 'Screens/home_screen.dart';
-import 'color_and_styles/space_colors.dart';
+import 'package:space_app/ui/screens/home_screen.dart';
+import 'package:space_app/ui/screens/login_screen.dart';
+import 'package:space_app/ui/screens/planet_details_screen.dart';
+import 'core/utils/space_colors.dart';
 
 void main(){
   runApp(SpaceApp());

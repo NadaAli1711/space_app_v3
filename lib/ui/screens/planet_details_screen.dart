@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_3d_controller/flutter_3d_controller.dart';
-import 'package:space_app/color_and_styles/app_styles.dart';
-import '../Components/planet_appbar.dart';
-import '../planet_data_and_model/planets_data.dart';
-import '../planet_data_and_model/planet_model.dart';
-
+import 'package:space_app/core/utils/app_styles.dart';
+import '../../core/models/planet_model.dart';
+import '../../core/models/planets_data.dart';
+import '../widgets/planet_appbar.dart';
 class PlanetDetails extends StatelessWidget {
   static const String routName = 'PlanetDetails';
 
@@ -12,6 +11,10 @@ class PlanetDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
+    double designWidth = 375;
+    var height = MediaQuery.of(context).size.height;
+    double designHeight = 1096;
     int args = ModalRoute.of(context)?.settings.arguments as int;
     PlanetModel currentPlanet = PlanetData.planets[args];
     return Scaffold(
@@ -20,27 +23,27 @@ class PlanetDetails extends StatelessWidget {
 
           children: [
             PlanetAppBar(
-              height: 144,
+              appBarHeight: (144/designHeight)*height,
               name: currentPlanet.planetName,
               title: currentPlanet.title,
               context: context,
             ),
             Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: EdgeInsets.all((16/designWidth)*width),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start,children: [
                 SizedBox(
-                height: 343,
+                height: (343/designHeight)*height,
                 child: Flutter3DViewer(
                   key: ValueKey(currentPlanet.planetName),
                   src:
                   'assets/models/${currentPlanet.planetName.toLowerCase()}.glb',
                 ),
               ),
-                SizedBox(height: 36),
+                SizedBox(height: (36/designHeight)*height),
                 Text('About', style: AppStyles.white24Bold),
-                SizedBox(height: 8),
+                SizedBox(height: (8/designHeight)*height),
                 Text(currentPlanet.about, style: AppStyles.white16Light),
-                SizedBox(height: 15),
+                SizedBox(height:(15/designHeight)*height),
                 ...renderList(currentPlanet),],),
             )
 

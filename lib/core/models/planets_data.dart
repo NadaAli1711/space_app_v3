@@ -1,8 +1,12 @@
-import 'package:space_app/planet_data_and_model/planet_model.dart';
+
+
+import 'package:space_app/core/models/planet_model.dart';
+import 'package:space_app/core/utils/app_images.dart';
 
 class PlanetData {
   static List<PlanetModel> planets = [
     PlanetModel(
+      imageName: AppImages.sun,
       planetName: 'Sun',
       title: 'The Sun: Our Solar System\'s Star',
       about:
@@ -16,6 +20,7 @@ class PlanetData {
       surfaceArea: '6.09 × 10¹²',
     ),
     PlanetModel(
+      imageName: AppImages.mercury,
       planetName: 'Mercury',
       title: 'Mercury: The Closest Planet',
       about:
@@ -29,6 +34,7 @@ class PlanetData {
       surfaceArea: '7.48 × 10⁷',
     ),
     PlanetModel(
+      imageName: AppImages.venus,
       planetName: 'Venus',
       title: 'Venus: Earth\'s Toxic Twin',
       about:
@@ -42,6 +48,7 @@ class PlanetData {
       surfaceArea: '4.60 × 10⁸',
     ),
     PlanetModel(
+      imageName: AppImages.earth,
       planetName: 'Earth',
       title: 'Earth: Our Blue Marble',
       about:
@@ -55,6 +62,7 @@ class PlanetData {
       surfaceArea: '5.10 × 10⁸',
     ),
     PlanetModel(
+      imageName: AppImages.mars,
       planetName: 'Mars',
       title: 'Mars: The Red Planet',
       about:
@@ -68,6 +76,7 @@ class PlanetData {
       surfaceArea: '1.45 × 10⁸',
     ),
     PlanetModel(
+      imageName: AppImages.jupiter,
       planetName: 'Jupiter',
       title: 'Jupiter: The Gas Giant',
       about:
@@ -81,6 +90,7 @@ class PlanetData {
       surfaceArea: '6.21 × 10¹⁵',
     ),
     PlanetModel(
+      imageName: AppImages.saturn,
       planetName: 'Saturn',
       title: 'Saturn: The Ringed Planet',
       about:
@@ -94,6 +104,7 @@ class PlanetData {
       surfaceArea: '4.27 × 10¹⁵',
     ),
     PlanetModel(
+      imageName: AppImages.uranus,
       planetName: 'Uranus',
       title: 'Uranus: The Tilted Planet',
       about:
@@ -107,6 +118,7 @@ class PlanetData {
       surfaceArea: '8.1 × 10¹⁵',
     ),
     PlanetModel(
+      imageName: AppImages.neptune,
       planetName: 'Neptune',
       title: 'Neptune: The Distant World',
       about:

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:space_app/Screens/planet_details_screen.dart';
-import 'package:space_app/color_and_styles/app_styles.dart';
-import '../Components/space_elevatedbutton.dart';
-import '../Components/arrow_button.dart';
-import '../Components/planet_appbar.dart';
-import '../color_and_styles/space_colors.dart';
-import '../planet_data_and_model/planets_data.dart';
+import 'package:space_app/core/utils/app_styles.dart';
+import 'package:space_app/ui/screens/planet_details_screen.dart';
+import '../../core/models/planets_data.dart';
+import '../widgets/arrow_button.dart';
+import '../widgets/planet_appbar.dart';
+import '../widgets/space_elevatedbutton.dart';
+
 
 class HomeScreen extends StatefulWidget {
   static const routeName = 'HomeScreen';
@@ -16,11 +16,16 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
   static const routeName = 'HomeScreen';
   int currentIndex = 0;
   final PageController _pageController = PageController();
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
+    double designWidth = 375;
+    var height = MediaQuery.of(context).size.height;
+    double designHeight = 812;
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -29,10 +34,10 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             flex: 3,
             child: Padding(
-              padding: const EdgeInsets.only(top: 22,bottom: 38),
+              padding: EdgeInsets.only(top:(22/designHeight)*height,bottom:(38/designHeight)*height),
               child: PageView.builder(
                 itemBuilder: (context, index) => Image.asset(
-                  'assets/images/scroll_images/${PlanetData.planets[index].planetName.toLowerCase()}.png',
+                  PlanetData.planets[index].imageName,
                 ),
                 itemCount: PlanetData.planets.length,
                 controller: _pageController,
@@ -68,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
           Padding(
-            padding: EdgeInsets.only(top:38,bottom: 22,left: 16,right: 16),
+            padding: EdgeInsets.only(top:(38/designHeight)*height,bottom: (22/designHeight)*height,left: (16/designWidth)*width,right: (16/designWidth)*width),
             child: SpaceElevatedButton(
               text: 'Explore ${PlanetData.planets[currentIndex].planetName}',
               routeName: routeName,

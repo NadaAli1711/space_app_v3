@@ -25,4 +25,9 @@ class AppStyles {
     fontWeight: FontWeight.w900,
     fontSize: 48,
   );
+  static const TextStyle white20SemiBold = TextStyle(
+    color: SpaceColors.white,
+    fontWeight: FontWeight.w600,
+    fontSize: 20,
+  );
 }
