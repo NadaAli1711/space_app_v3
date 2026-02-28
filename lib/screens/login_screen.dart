@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:space_app/Screens/home_screen.dart';
+import 'package:space_app/color_and_styles/app_styles.dart';
 import '../Components/space_elevatedbutton.dart';
-import '../color_and_styles/SpaceColors.dart';
+import '../color_and_styles/space_colors.dart';
 
 class LoginScreen extends StatelessWidget {
   static const routeName = 'LoginScreen';
+
+  const LoginScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: SpaceColors.black,
       body: Stack(
         children: [
           Image.asset(
@@ -23,25 +25,17 @@ class LoginScreen extends StatelessWidget {
             alignment: Alignment.centerLeft,
             child: Text(
               'Explore The Universe ',
-              style: TextStyle(
-                color: SpaceColors.white,
-                fontWeight: FontWeight.w900,
-                fontSize: 48,
-              ),
+              style: AppStyles.white48Black
             ),
           ),
-          Padding(
+          Container(
             padding: EdgeInsets.symmetric(vertical: 22, horizontal: 16),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                SpaceElevatedButton(
-                  text: 'Explore',
-                  routeName: routeName,
-                  onButtonClick: onButtonClick,
-                  context: context,
-                ),
-              ],
+            alignment: Alignment.bottomCenter,
+            child: SpaceElevatedButton(
+              text: 'Explore',
+              routeName: routeName,
+              onButtonClick: onButtonClick,
+              context: context,
             ),
           ),
         ],
@@ -50,6 +44,6 @@ class LoginScreen extends StatelessWidget {
   }
 
   void onButtonClick(BuildContext context, String routeName) {
-    Navigator.of(context).pushNamed(HomeScreen.routeName);
+    Navigator.of(context).pushReplacementNamed(HomeScreen.routeName);
   }
 }

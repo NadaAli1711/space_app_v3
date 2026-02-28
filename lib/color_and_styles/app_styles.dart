@@ -1,23 +1,28 @@
 import 'package:flutter/material.dart';
 
-import 'SpaceColors.dart';
+import 'space_colors.dart';
 
 class AppStyles {
-  static const TextStyle textStyle = TextStyle(
+  static const TextStyle white24Bold = TextStyle(
     color: SpaceColors.white,
     fontWeight: FontWeight.w700,
     fontSize: 24,
     height: 36 / 24,
   );
-  static const TextStyle paragraphStyle = TextStyle(
+  static const TextStyle white16Light = TextStyle(
     color: SpaceColors.white,
     fontWeight: FontWeight.w300,
     fontSize: 16,
   );
-  static const TextStyle subTitleStyle = TextStyle(
+  static const TextStyle white16Bold = TextStyle(
     color: SpaceColors.white,
     fontWeight: FontWeight.w700,
     fontSize: 16,
     height: 36 / 16,
+  );
+  static const TextStyle white48Black = TextStyle(
+    color: SpaceColors.white,
+    fontWeight: FontWeight.w900,
+    fontSize: 48,
   );
 }
