@@ -24,7 +24,7 @@ class LoginScreen extends StatelessWidget {
           ),
           Container(
             padding: EdgeInsets.only(left: (16/designWidth)*width),
-            width: (256/designWidth)*width,
+            width: (240/designWidth)*width,
             alignment: Alignment.centerLeft,
             child: Text(
               'Explore The Universe ',
