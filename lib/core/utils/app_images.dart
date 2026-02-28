@@ -10,4 +10,16 @@ class AppImages {
   static const String uranus = 'assets/images/scroll_images/uranus.png';
   static const String venus = 'assets/images/scroll_images/venus.png';
   static const String saturn = 'assets/images/scroll_images/saturn.png';
+
+}
+class AppModelsPaths {
+  static const String earth = 'assets/models/earth.glb';
+  static const String jupiter = 'assets/models/jupiter.glb';
+  static const String mars = 'assets/models/mars.glb';
+  static const String mercury = 'assets/models/mercury.glb';
+  static const String neptune = 'assets/models/neptune.glb';
+  static const String sun = 'assets/models/sun.glb';
+  static const String uranus = 'assets/models/uranus.glb';
+  static const String venus = 'assets/models/venus.glb';
+  static const String saturn = 'assets/models/saturn.glb';
 }

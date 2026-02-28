@@ -34,8 +34,7 @@ class PlanetDetails extends StatelessWidget {
                 height: (343/designHeight)*height,
                 child: Flutter3DViewer(
                   key: ValueKey(currentPlanet.planetName),
-                  src:
-                  'assets/models/${currentPlanet.planetName.toLowerCase()}.glb',
+                  src:currentPlanet.modelName,
                 ),
               ),
                 SizedBox(height: (36/designHeight)*height),

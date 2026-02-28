@@ -52,7 +52,7 @@ class PlanetAppBar extends StatelessWidget {
                         icon: Icons.arrow_back,
                         onClick: () => Navigator.pop(context),
                       ),
-                      SizedBox(width: (100/designWidth)*width),
+                      SizedBox(width: (87/designWidth)*width),
                       Text(name, style: AppStyles.white24Bold),
                     ],
                   )

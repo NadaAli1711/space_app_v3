@@ -6,6 +6,7 @@ import 'package:space_app/core/utils/app_images.dart';
 class PlanetData {
   static List<PlanetModel> planets = [
     PlanetModel(
+      modelName: AppModelsPaths.sun,
       imageName: AppImages.sun,
       planetName: 'Sun',
       title: 'The Sun: Our Solar System\'s Star',
@@ -20,6 +21,7 @@ class PlanetData {
       surfaceArea: '6.09 × 10¹²',
     ),
     PlanetModel(
+      modelName: AppModelsPaths.mercury,
       imageName: AppImages.mercury,
       planetName: 'Mercury',
       title: 'Mercury: The Closest Planet',
@@ -34,6 +36,7 @@ class PlanetData {
       surfaceArea: '7.48 × 10⁷',
     ),
     PlanetModel(
+      modelName: AppModelsPaths.venus,
       imageName: AppImages.venus,
       planetName: 'Venus',
       title: 'Venus: Earth\'s Toxic Twin',
@@ -48,6 +51,7 @@ class PlanetData {
       surfaceArea: '4.60 × 10⁸',
     ),
     PlanetModel(
+      modelName: AppModelsPaths.earth,
       imageName: AppImages.earth,
       planetName: 'Earth',
       title: 'Earth: Our Blue Marble',
@@ -62,6 +66,7 @@ class PlanetData {
       surfaceArea: '5.10 × 10⁸',
     ),
     PlanetModel(
+      modelName: AppModelsPaths.mars,
       imageName: AppImages.mars,
       planetName: 'Mars',
       title: 'Mars: The Red Planet',
@@ -76,6 +81,7 @@ class PlanetData {
       surfaceArea: '1.45 × 10⁸',
     ),
     PlanetModel(
+      modelName: AppModelsPaths.jupiter,
       imageName: AppImages.jupiter,
       planetName: 'Jupiter',
       title: 'Jupiter: The Gas Giant',
@@ -90,6 +96,7 @@ class PlanetData {
       surfaceArea: '6.21 × 10¹⁵',
     ),
     PlanetModel(
+      modelName: AppModelsPaths.saturn,
       imageName: AppImages.saturn,
       planetName: 'Saturn',
       title: 'Saturn: The Ringed Planet',
@@ -104,6 +111,7 @@ class PlanetData {
       surfaceArea: '4.27 × 10¹⁵',
     ),
     PlanetModel(
+      modelName: AppModelsPaths.uranus,
       imageName: AppImages.uranus,
       planetName: 'Uranus',
       title: 'Uranus: The Tilted Planet',
@@ -118,6 +126,7 @@ class PlanetData {
       surfaceArea: '8.1 × 10¹⁵',
     ),
     PlanetModel(
+      modelName: AppModelsPaths.neptune,
       imageName: AppImages.neptune,
       planetName: 'Neptune',
       title: 'Neptune: The Distant World',
