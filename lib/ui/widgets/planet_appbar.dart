@@ -33,7 +33,9 @@ class PlanetAppBar extends StatelessWidget {
             width: double.infinity,
           ),
           Container(
-            padding: EdgeInsets.only(top: (26/designHeight)*height),
+            padding: EdgeInsets.only(top: (26/designHeight)*height
+                 ,bottom: (39/designHeight)*height
+            ),
             alignment: Alignment.topCenter,
             decoration: BoxDecoration(
               gradient: LinearGradient(

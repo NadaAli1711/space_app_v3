@@ -20,10 +20,9 @@ class PlanetDetails extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-
           children: [
             PlanetAppBar(
-              appBarHeight: (144/designHeight)*height,
+              appBarHeight: (160/designHeight)*height,
               name: currentPlanet.planetName,
               title: currentPlanet.title,
               context: context,
